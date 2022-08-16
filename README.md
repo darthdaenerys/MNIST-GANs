@@ -1,40 +1,67 @@
-# MNIST Deep Convolution Generative Adverserial Network
+# MNIST Generative Adverserial Network
 
-Tensorflow implementation of Deep Convolution Generative Adversarial Networks (DCGAN) for MNIST dataset.
+Tensorflow implementation of Generative Adversarial Networks for MNIST dataset.
 
-![](animation.gif)
+![](DCGAN\animation.gif)
 
 Mnist-gan is a GAN(Generative Adversarial Network) that learns how to generate images that look like mnist digits. Separate networks are trained for each digit. The idea is to train a generator network which when fed noise (in my case a 128 dimensional random vector) will generate an image that looks like an mnist style 8 (for example). In essence the network is finding a function of 128 variables that returns a matrix of pixels that look like an eight. Mind bending! You can see how the digit starts to take shape from the noise.
 
+## DCGAN
+---
 This is what the generated actually generated before training.
 
-![](noise.png)
+![](DCGAN\noise.png)
 
-## Results
+### Results
 
 These are the results after training for 500 epochs.
 
-![](GAN%20generated-1.png)
+![](DCGAN/DCGAN%20generated-1.png)
 
-![](GAN%20generated-2.png)
+### Generator and Discriminator loss curves
 
-## Generator and Discriminator loss curves
-
-![](plot.png)
+![](DCGAN\plot.png)
 
 There are some bumps both for generator and discriminator but on an average both stays almost at the same loss.
 
-## Implementation details
+### Implementation details
 
-- Batch size: 128
-- Learning rate: 1e-4
-- Epochs: 500
-- Optimizer: Adam
+    - Batch size: 128
+    - Learning rate: 1e-4
+    - Epochs: 500
+    - Optimizer: Adam
 
 ### Learning time
 
-- 7 secs per epoch
-- Total time: almost 1 hr
+    - 7 secs per epoch
+    - Total time: almost 1 hr
+
+## WGAN
+---
+### Pre-training images
+
+![](WGAN/noise.gif)
+
+### Results after 120 epochs
+
+![](WGAN/wgan-generated.gif)
+
+### Generator and critic loss curves
+
+![](WGAN/loss_trend.png)
+
+### Implementation details
+
+    - Batch size: 400
+    - Learning rate: 0.00002
+    - Epochs: 120
+    - Optimizer: Adam
+
+### Learning time
+
+    - 116 secs per epoch
+    - Training time: 4 hours 21 minutes 43 seconds
+
 
 ## Dataset
 
