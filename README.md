@@ -90,11 +90,7 @@ There are some bumps both for generator and discriminator but on an average both
 
 ## Dataset
 
-    MNIST
-
-![](mnist.png)
-
-**You can download the dataset by clicking** [here](http://yann.lecun.com/exdb/mnist/)
+You can download the dataset by clicking [here](http://yann.lecun.com/exdb/mnist/)
 
 ## Development Environment
 
